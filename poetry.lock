@@ -108,7 +108,7 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 
@@ -802,6 +802,23 @@ optional = false
 python-versions = ">= 3.7"
 
 [[package]]
+name = "tqdm"
+version = "4.64.1"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
+
+[[package]]
 name = "traitlets"
 version = "5.9.0"
 description = "Traitlets Python configuration system"
@@ -890,7 +907,7 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9497e2323794e156a15bfaa494c2ae6c15f94387463bdb45eb514dd02a314d22"
+content-hash = "16d7aa0721093aba2f7e034053bee58dc2a45aa1d3bb90a0e2df89b7f0e0d174"
 
 [metadata.files]
 appnope = []
@@ -967,6 +984,7 @@ stack-data = []
 tenacity = []
 tomli = []
 tornado = []
+tqdm = []
 traitlets = []
 trio = []
 trio-websocket = []
