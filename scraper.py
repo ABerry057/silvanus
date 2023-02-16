@@ -53,6 +53,6 @@ for interval in progress_bar:
     # database search results page should now be loaded
     assert driver.title == 'Spill Incidents Database Search'
     export_csv_elem = driver.find_element(By.XPATH, '/html/body/div/div[3]/div/form/input[3]')
-    sleep(3)
+    sleep(3) # wait after each search to avoid throttling
     export_csv_elem.click()
 driver.close()

@@ -594,6 +594,17 @@ python-versions = "*"
 tests = ["pytest"]
 
 [[package]]
+name = "pyarrow"
+version = "11.0.0"
+description = "Python library for Apache Arrow"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = ">=1.16.6"
+
+[[package]]
 name = "pycodestyle"
 version = "2.10.0"
 description = "Python style guide checker"
@@ -907,7 +918,7 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "16d7aa0721093aba2f7e034053bee58dc2a45aa1d3bb90a0e2df89b7f0e0d174"
+content-hash = "4cf7b199c922b74431ad6da7229fa059c0b8e81be402dad202960f1315ee32c5"
 
 [metadata.files]
 appnope = []
@@ -958,6 +969,7 @@ prompt-toolkit = []
 psutil = []
 ptyprocess = []
 pure-eval = []
+pyarrow = []
 pycodestyle = []
 pycparser = []
 pyflakes = []
