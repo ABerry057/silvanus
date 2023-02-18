@@ -20,5 +20,6 @@ data_set = pd.concat(csv_contents)
 # transform some string cols to title case
 cols_to_normalize = ['Spill Name', 'City/Town', 'Address']
 data_set[cols_to_normalize] = data_set[cols_to_normalize].apply(lambda x: x.str.title())
+data_set.columns = [c.replace(' ', '_').lower() for c in data_set.columns]
 
 data_set.to_parquet('./data/spill_data.parquet')
